@@ -535,8 +535,6 @@ def check_cloud():  # 方法 云端地址检查
             logger.debug(str(err))  # 调试日志输出
             continue  # 循环继续
         else:  # 分支判断
-            info = ['HTTPS', 'Eu_HTTPS', 'CloudFlare']  # 输出信息[List]
-            logger.info(str(info[url_list.index(i)]) + " Server Check OK\n--------------------\n")  # 标准日志输出
             return i  # 返回 ->i
     logger.info("\n云端地址全部失效, 请检查网络!")  # 标准日志输出
     ql_send('云端地址失效. 请联系作者或者检查网络.')  # 推送消息
